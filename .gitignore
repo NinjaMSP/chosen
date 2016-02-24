@@ -4,7 +4,7 @@ node_modules
 public/*.min.js
 public/*.proto.js
 public/*.css
-public/bower.json
+public/*.json
 chosen.zip
 .sass-cache
 .ruby-version

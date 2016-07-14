@@ -1,7 +1,8 @@
 .DS_Store
 node_modules
 .project
-public/*.js
+public/*.min.js
+public/*.proto.js
 public/*.css
 public/bower.json
 chosen.zip

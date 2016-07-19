@@ -56,6 +56,7 @@ MIT License, https://github.com/harvesthq/chosen/blob/master/LICENSE.md
             this.parsed[group_position].children += 1;
           }
           // Ninja (exact_match)
+          var exact_match = option.getAttribute('data-exact-match') || false;
           this.parsed.push({
             array_index: this.parsed.length,
             options_index: this.options_index,
@@ -69,7 +70,7 @@ MIT License, https://github.com/harvesthq/chosen/blob/master/LICENSE.md
             group_label: group_position != null ? this.parsed[group_position].label : null,
             classes: option.className,
             style: option.style.cssText,
-            exact_match: option.getAttribute('data-exact-match')
+            exact_match: exact_match
           });
         } else {
           this.parsed.push({

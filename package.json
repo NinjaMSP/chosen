@@ -1,6 +1,6 @@
 {
   "name": "ninjamsp-chosen",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "chosen.jquery.min.js",
   "description": "[Forked] from chosen v1.6.1 https://github.com/harvesthq/chosen. This fork includes the fuzzy-search PR (https://github.com/harvesthq/chosen/pull/2599/files) as well as custom modification specific to our app."
 }

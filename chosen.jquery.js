@@ -411,7 +411,7 @@ MIT License, https://github.com/harvesthq/chosen/blob/master/LICENSE.md
         }
       }
       this.result_clear_highlight();
-      if (results - this.selected_option_count < 1 && searchText.length) {
+      if (searchText.length && !results) {
         var updateWithSelected;
         if (this.selected_option_count) {
           updateWithSelected = this.search_results.find('li.result-selected');
@@ -543,7 +543,7 @@ MIT License, https://github.com/harvesthq/chosen/blob/master/LICENSE.md
         case 13:
           evt.preventDefault();
           // Ninja
-          if (this.create_option && this.search_results.find('li.create-option').length) {
+          if (this.create_option && (this.search_results.find('li.create-option.highlighted').length || (!this.search_results.find('li.active-result:not(.create-option)').length && this.search_results.find('li.create-option').length))) {
             $(this).trigger('chosen:updated');
             this.result_highlight = this.search_results.find('li.active-result').last();
             if (this.result_highlight.length > 0) {

@@ -1253,7 +1253,7 @@ MIT License, https://github.com/harvesthq/chosen/blob/master/LICENSE.md
     };
     // Ninja
     Chosen.prototype.select_create_option = function (terms) {
-        if (!_.findWhere(this.results_data, { value: terms })) {
+        if (!this.results_data.filter(function(v) {return v.value === terms}).length) {
             if ($.isFunction(this.create_option)) {
                 return this.create_option.call(this, terms);
             } else {
